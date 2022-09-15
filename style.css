@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy"
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    background-color:#ffc856;
+}
+
+#video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 28%;
+    height: 65.1%;
+    background-color: #ffc856;
+    transform: translate(-50%, -50%);
+}
+
+video {
+    height: 100%;
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10vw;
+    color: #ffff;
+}
+
+#nav {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 40px;
+}
+
+#nav {
+    color: #fff;
+}
+
+button {
+    padding: 12px 22px;
+    background-color: #c78667;
+    border: none;
+    border-radius: 3px 15px 3px 15px;
+    color: #fff;
+    transition: .5s;
+}
+
+button:hover {
+    background-color: #eb7f4c;
+    border-radius: 15px 3px 15px 3px;
+    cursor: pointer;
+}
+
+#warn {
+    position: absolute;
+    width: 200px;
+    font-weight: 500;
+    font-size: 10px;
+    padding: 10px;
+    bottom: 5%;
+    left: 5%;
+    background-color: #5a3321;
+    color: white;
+    border-radius: 5px;
+}
+
+#slidedown {
+    text-transform: uppercase;
+    flex-direction: column;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 10px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    bottom: 4%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#slidedown i {
+    animation: anim 1s cubic-bezier(0.19, 1, 0.22, 1) infinite both;
+}
+
+@media(max-width: 500px) {
+    #nav {
+        padding: 0 20px;
+        height: 100px;
+        align-items: center;
+    }
+
+    #nav button {
+        font-size: 10px;
+        padding: 7px 12px;
+    }
+
+    #main h1 {
+        font-size: 15vw;
+    }
+
+    #video {
+        width: 81%;
+        height: 41%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #warn {
+        bottom: 10%;
+    }
+
+    #slidedown {
+        width: 100%;
+    }
+}
+
+@keyframes anim {
+    0%{
+        margin-bottom: 10px;
+    }
+    50%{
+        margin-bottom: 0px;
+    }
+    100%{
+        margin-bottom: 10px ;
+    }
+}
